@@ -18,11 +18,11 @@ export default {
         route.fullPath === "/home"
       ) {
         status = true;
-        console.log(status);
+        // console.log(status);
         return status;
       } else {
         status = false;
-        console.log(status);
+        // console.log(status);
         return status;
       }
     },

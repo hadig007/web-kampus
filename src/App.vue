@@ -35,11 +35,11 @@ export default {
       const route = useRoute();
      if(route.fullPath==='/home' || route.fullPath==='/home/html' || route.fullPath==='/home/css' || route.fullPath==='/home/javascript'){
        status = true
-       console.log(status)
+      //  console.log(status)
        return status
      }else{
        status = false
-       console.log(status)
+      //  console.log(status)
        return status
      }
     },
@@ -51,16 +51,21 @@ export default {
 };
 </script>
 
-<style>
+<style >
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-body {
+/* html, body {
+  overflow-x:hidden 
+} */
+#app {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   background-color: rgba(239, 253, 253, 0.589);
-  overflow: hidden;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
+
 .content {
   background-color: rgba(255, 255, 255, 0.644);
   margin: 50px auto;
@@ -81,6 +86,7 @@ body {
   display: grid;
   grid-template-areas: 'content';
   background-color: rgb(0, 255, 255);
+
 }
 .page-enter-from {
   opacity: 0;
@@ -109,4 +115,25 @@ h6,
 ul {
   margin: 0;
 }
+
+
+
+/* phone */
+
+@media screen and (max-width: 576px) {
+  .body {
+  display: grid;
+  grid-template-areas: 'content';
+
+}
+  .sidebar{
+    display: none;
+  }
+
+.content{
+  margin: 20px auto;
+  width: 90vw;
+}
+}
+
 </style>

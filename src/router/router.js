@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory,  } from 'vue-router'
 
 import HomeApp from '../components/HomeApp.vue';
 
@@ -11,8 +11,10 @@ import JavascriptContent from '../components/content/javascript/JavascriptConten
 
 
 
+
+
 const router = createRouter({
-    history : createWebHistory(),
+    history : createWebHashHistory(),
     routes : [
         {
             path : '/home',
